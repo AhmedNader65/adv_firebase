@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ConstructorParameterNaming:NotificationCampaign.kt$CampaignScreen$val primaryImage_url: String? = null</ID>
+    <ID>EmptyCatchBlock:ActiveCampaignCommand.kt$ActiveCampaignCommand${ }</ID>
+    <ID>EmptyCatchBlock:TrialCampaignManagement.kt$TrialCampaignManagement${ }</ID>
+    <ID>EmptyElseBlock:FirebaseInAppMessagingImpl.kt$FirebaseInAppMessagingImpl${ }</ID>
+    <ID>ExplicitItLambdaParameter:TrialCampaignManagement.kt$TrialCampaignManagement${ it -&gt; if (it.exists()) { val campaignMaps = (it.value as Map&lt;*, *&gt;) // if there is no campaign, get first promation and save it val filteredCampaignIds = list .map { it?.offerCampaignId } .map { id -&gt; campaignMaps.filter { campaign -&gt; try { val campaignMap = campaign.value as Map&lt;*, *&gt; campaign.key == id &amp;&amp; campaignMap[TRIAL_CAMPAIGNS_COMPLETE] as Long? in listOf( TRIAL_INIT_STATUS, TRIAL_IN_PROGRESS_STATUS ) } catch (e: ClassCastException) { false } } } val filter = filteredCampaignIds.firstOrNull { campaignMap -&gt; campaignMap[TRIAL_CAMPAIGNS_COMPLETE] as Long? == TRIAL_IN_PROGRESS_STATUS } ?: filteredCampaignIds.first() filter.map { campaign -&gt; val promotion = list .first { it?.offerCampaignId == campaign.key } val campaignMap = campaign.value as Map&lt;*, *&gt; val start: LocalDate = LocalDate.parse(campaignMap[TRIAL_CAMPAIGNS_DATE_OF_FIRST_ACTIVATE] as String?) val end: LocalDate = LocalDate.now() val days = Days.daysBetween(start, end).days TrialCampaign( campaign.key as String, start, days, promotion?.numberOfFreeDays?.minus(days) ?: 0, promotion!! ) }.filter { it.hasMoreDaysLeft &gt;= 0 } .maxByOrNull { it.numberOfDays }?.apply { prefs.activePromotionDate = ISODateTimeFormat.date().print(date) prefs.activePromotionId = id } broadcastEvent(CampaignNetworkEvent.CampaignDatesUpdatd) } else { broadcastEvent(CampaignNetworkEvent.CampaignDatesUpdatd) try { if (prefs.dateOfFirstInstall.daysLeft() == 0) { val promotion = list.first() val campaignId = promotion!!.offerCampaignId prefs.activePromotionDate = ISODateTimeFormat.date().print(LocalDate.now()) prefs.activePromotionId = campaignId campaignDaysCounterCommand.execute() campaignStatusCommand.execute(TRIAL_IN_PROGRESS_STATUS) } } catch (e: NoSuchElementException) { } } }</ID>
+    <ID>Filename:utils.kt$com.advance.firebase.campaign.utils.kt</ID>
+    <ID>LongParameterList:CampaignModule.kt$CampaignModule$( localCampaignDataSource: LocalCampaignDataSource, remoteCampaignDataSource: RemoteCampaignDataSource, resourceHandler: ResourceHandler, affiliateInfo: AffiliateInfo, networkUtils: NetworkUtils, prefs: Prefs, moshi: Moshi )</ID>
+    <ID>LongParameterList:CampaignRepository.kt$CampaignRepository$( private val localCampaignDataSource: LocalCampaignDataSource, private val remoteCampaignDataSource: RemoteCampaignDataSource, private val resourceHandler: ResourceHandler, private val affiliateInfo: AffiliateInfo, private val networkUtils: NetworkUtils, private val prefs: Prefs, private val moshi: Moshi )</ID>
+    <ID>LongParameterList:Promotions.kt$Promotions$( val id: String, val minFirstInstallVersion: String, val numberOfFreeDays: Int, val freeDayCampaignId: String, val offerId: String, val offerAvailabilityDays: Int, val offerCampaignId: String, )</ID>
+    <ID>MaximumLineLength:AdvanceRemoteConfig.kt$AdvanceRemoteConfig.Companion$ </ID>
+    <ID>MaximumLineLength:CampaignModule.kt$CampaignModule$ </ID>
+    <ID>MaximumLineLength:CampaignRepository.kt$CampaignRepository$ </ID>
+    <ID>MaximumLineLength:Dto.kt$ </ID>
+    <ID>NoWildcardImports:CampaignRepository.kt$import com.advance.firebase.campaign.model.*</ID>
+    <ID>NoWildcardImports:FirebaseCommandsModule.kt$import com.advance.firebase.core.commands.*</ID>
+    <ID>TooManyFunctions:AdvanceRemoteConfig.kt$AdvanceRemoteConfig</ID>
+    <ID>VariableNaming:SyncProfileWithFirebaseCommand.kt$SyncProfileWithFirebaseCommand$val TAG = "SyncProfileWithFirebaseCommand"</ID>
+    <ID>WildcardImport:CampaignRepository.kt$import com.advance.firebase.campaign.model.*</ID>
+    <ID>WildcardImport:FirebaseCommandsModule.kt$import com.advance.firebase.core.commands.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

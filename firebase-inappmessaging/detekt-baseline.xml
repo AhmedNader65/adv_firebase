@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ChainWrapping:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$&amp;&amp;</ID>
+    <ID>ChainWrapping:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$||</ID>
+    <ID>FinalNewline:FirebaseInAppMessaging.kt$com.google.firebase.inappmessaging.FirebaseInAppMessaging.kt</ID>
+    <ID>FinalNewline:FirebaseLogger.kt$com.google.firebase.inappmessaging.logger.FirebaseLogger.kt</ID>
+    <ID>FinalNewline:ForegroundNotifier.kt$com.google.firebase.inappmessaging.internal.ForegroundNotifier.kt</ID>
+    <ID>LongParameterList:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$( @param:AppForeground private val appForegroundEventFlowable: ConnectableFlowable&lt;String&gt;, private val inAppMessageStreamManager: InAppMessageStreamManager, @param:ProgrammaticTrigger private val programaticContextualTriggers: ProgramaticContextualTriggers, private val dataCollectionHelper: DataCollectionHelper, firebaseInstallations: FirebaseInstallationsApi, private val displayCallbacksFactory: DisplayCallbacksFactory, private val developerListenerManager: DeveloperListenerManager, private val firebaseLogger: FirebaseLogger )</ID>
+    <ID>MaxLineLength:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$"triggerInAppMessage() called, inAppMessage.inAppMessage: ${inAppMessage.inAppMessage}, inAppMessage.triggeringEvent: ${inAppMessage.triggeringEvent}..."</ID>
+    <ID>MaxLineLength:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$*</ID>
+    <ID>MaxLineLength:ForegroundNotifier.kt$ForegroundNotifier$*</ID>
+    <ID>MaximumLineLength:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$ </ID>
+    <ID>NoBlankLineBeforeRbrace:ForegroundNotifier.kt$ForegroundNotifier$ </ID>
+    <ID>NoConsecutiveBlankLines:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$ </ID>
+    <ID>NoConsecutiveBlankLines:ForegroundNotifier.kt$ForegroundNotifier$ </ID>
+    <ID>NoUnusedImports:ForegroundNotifier.kt$com.google.firebase.inappmessaging.internal.ForegroundNotifier.kt</ID>
+    <ID>NoWildcardImports:FirebaseInAppMessaging.kt$import com.google.firebase.inappmessaging.internal.*</ID>
+    <ID>ParameterListWrapping:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$( clickListener: FirebaseInAppMessagingClickListener, executor: Executor )</ID>
+    <ID>ParameterListWrapping:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$( dismissListener: FirebaseInAppMessagingDismissListener, executor: Executor )</ID>
+    <ID>TooManyFunctions:FirebaseInAppMessaging.kt$FirebaseInAppMessaging</ID>
+    <ID>VariableNaming:FirebaseInAppMessaging.kt$FirebaseInAppMessaging$private val TAG = "FirebaseInAppMessaging"</ID>
+    <ID>WildcardImport:FirebaseInAppMessaging.kt$import com.google.firebase.inappmessaging.internal.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
