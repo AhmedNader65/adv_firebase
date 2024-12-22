@@ -1,6 +1,7 @@
 package com.google.firebase.inappmessaging.logger
 
 import com.datadog.android.log.Logger
+import com.google.firebase.inappmessaging.BuildConfig
 
 class FirebaseLogger {
     private val logger by lazy {

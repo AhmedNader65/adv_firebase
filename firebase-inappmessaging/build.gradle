@@ -62,7 +62,7 @@ android {
         targetSdk 34
 
         buildConfigField "boolean", "IS_DEBUG", "false"
-        buildConfigField "String", "FLAVOR_NAME", '"default"'
+        buildConfigField "String", "FLAVOR", '"al"'
         buildConfigField "String", "BUILD_NUMBER", '"1.0.0"'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
