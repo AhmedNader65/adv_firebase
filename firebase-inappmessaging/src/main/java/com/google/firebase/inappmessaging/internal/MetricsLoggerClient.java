@@ -20,7 +20,6 @@ import static com.google.firebase.inappmessaging.EventType.IMPRESSION_EVENT_TYPE
 import android.os.Bundle;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.connector.AnalyticsConnector;
-import com.google.firebase.inappmessaging.BuildConfig;
 import com.google.firebase.inappmessaging.CampaignAnalytics;
 import com.google.firebase.inappmessaging.ClientAppInfo;
 import com.google.firebase.inappmessaging.DismissType;

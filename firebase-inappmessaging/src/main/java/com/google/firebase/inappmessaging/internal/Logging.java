@@ -16,7 +16,6 @@ package com.google.firebase.inappmessaging.internal;
 
 import android.util.Log;
 import com.google.common.annotations.VisibleForTesting;
-import com.google.firebase.inappmessaging.BuildConfig;
 
 /**
  * Helper class to facilitate logging. To enable debug logging in production run `adb shell setprop
@@ -30,7 +29,7 @@ public class Logging {
 
   /** Log a message if in debug mode or debug is loggable. */
   public static void logd(String message) {
-    if (BuildConfig.DEBUG || Log.isLoggable(TAG, Log.DEBUG)) {
+    if ( Log.isLoggable(TAG, Log.DEBUG)) {
       Log.d(TAG, message);
     }
   }
