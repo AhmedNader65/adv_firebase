@@ -54,6 +54,9 @@ android {
     }
     compileSdk 34
 
+    buildFeatures {
+        buildConfig = true
+    }
     defaultConfig {
         minSdk 24
         targetSdk 34
