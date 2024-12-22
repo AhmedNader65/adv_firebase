@@ -1,5 +1,6 @@
 package com.google.firebase.inappmessaging.logger
 
+import android.util.Log
 import com.datadog.android.log.Logger
 import com.google.firebase.inappmessaging.BuildConfig
 
@@ -17,6 +18,7 @@ class FirebaseLogger {
         logger.addAttribute("app.build", BuildConfig.BUILD_TYPE)
         logger.addAttribute("app.platform", "Android")
         logger.addAttribute("app.version", BuildConfig.BUILD_NUMBER)
+        Log.e("tasdasd",BuildConfig.BUILD_NUMBER)
         logger.i(message = message, throwable = throwable, attributes = mapOf("tag" to tag))
     }
 }
