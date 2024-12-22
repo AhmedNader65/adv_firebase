@@ -36,6 +36,7 @@ protobuf {
     }
 }
 android {
+    namespace = "google.protobuf"
     compileSdk 34
 
     defaultConfig {
