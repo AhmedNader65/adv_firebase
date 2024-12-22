@@ -29,7 +29,7 @@ public class Logging {
 
   /** Log a message if in debug mode or debug is loggable. */
   public static void logd(String message) {
-    if ( Log.isLoggable(TAG, Log.DEBUG)) {
+    if (BuildConfig.DEBUG || Log.isLoggable(TAG, Log.DEBUG)) {
       Log.d(TAG, message);
     }
   }
